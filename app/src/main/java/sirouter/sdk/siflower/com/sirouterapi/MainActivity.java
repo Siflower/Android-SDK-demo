@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button loginExtra;
 
+
     private Button bindSiRouter;
     private Button unbindSiRouter;
 
@@ -107,8 +108,8 @@ public class MainActivity extends AppCompatActivity {
 
 
     private static final String TAG = "mainActivity";
-    private String appKey = "c20ad4d76fe97759aa27a0c99bff6710";
-    private String appSecret = "864850023f299568b353d21e55c6c892";
+    private String appKey = "3416a75f4cea9109507cacd8e2f2aefc";
+    private String appSecret = "47a581aa79d3113e145a79d4d7449a3e";
     ProgressDialog progressDialog;
 
     public MainActivity() {
@@ -194,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onError(SFException ex) {
-                    Log.e(TAG, "login error" + ex.getMessage());
+                    Log.e(TAG, "登录失败，请检查AppSecret和AppKey");
                 }
             });
         } else {
@@ -230,7 +231,7 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onError(SFException ex) {
-                    Log.e(TAG, "login error" + ex.getMessage());
+                    Log.e(TAG, "登录失败，请检查AppSecret和AppKey");
                 }
             });
         }
